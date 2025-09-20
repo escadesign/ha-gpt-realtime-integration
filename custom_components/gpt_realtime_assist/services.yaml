@@ -1,0 +1,6 @@
+ptt_start:
+  name: Push-to-Talk Start
+  description: Startet Aufnahme/Streaming zur Realtime-Session
+ptt_stop:
+  name: Push-to-Talk Stop
+  description: Beendet Aufnahme (commit) und fordert Audio-Antwort an

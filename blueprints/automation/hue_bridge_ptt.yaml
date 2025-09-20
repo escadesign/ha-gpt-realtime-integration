@@ -1,0 +1,25 @@
+blueprint:
+  name: GPT Realtime PTT (Hue Bridge)
+  description: Hold = PTT start, Release = PTT stop
+  domain: automation
+  input:
+    event_hold:
+      name: Hold Event code
+      default: 1001
+    event_release:
+      name: Release Event code
+      default: 1002
+
+trigger:
+  - platform: event
+    event_type: hue_event
+
+action:
+  - choose:
+    - conditions: "{{ trigger.event.data.event == (event_hold | int) }}"
+      sequence:
+        - service: gpt_realtime_assist.ptt_start
+    - conditions: "{{ trigger.event.data.event == (event_release | int) }}"
+      sequence:
+        - service: gpt_realtime_assist.ptt_stop
+mode: restart

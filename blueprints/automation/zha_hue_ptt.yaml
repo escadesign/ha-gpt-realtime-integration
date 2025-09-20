@@ -1,0 +1,24 @@
+blueprint:
+  name: GPT Realtime PTT (ZHA Hue)
+  description: Hold = PTT start, Release = PTT stop
+  domain: automation
+  input:
+    device:
+      name: Hue Remote (ZHA device)
+      selector: { device: {} }
+
+trigger:
+  - platform: event
+    event_type: zha_event
+    event_data:
+      device_id: !input device
+
+action:
+  - choose:
+    - conditions: "{{ trigger.event.data.command in ['hold','long_press','move_hold'] }}"
+      sequence:
+        - service: gpt_realtime_assist.ptt_start
+    - conditions: "{{ trigger.event.data.command in ['release','stop','short_release'] }}"
+      sequence:
+        - service: gpt_realtime_assist.ptt_stop
+mode: restart

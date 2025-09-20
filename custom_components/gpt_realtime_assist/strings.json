@@ -1,0 +1,11 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "GPT Realtime Assist",
+        "description": "Verbinde die Integration mit dem Add-on (Host/Ingress URL + Basic Auth)."
+      }
+    },
+    "error": { "cannot_connect": "Verbindung fehlgeschlagen" }
+  }
+}
