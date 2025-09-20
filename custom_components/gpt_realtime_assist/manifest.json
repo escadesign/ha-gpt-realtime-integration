@@ -1,10 +1,11 @@
 {
   "domain": "gpt_realtime_assist",
   "name": "GPT Realtime Assist",
-  "version": "0.1.0",
-  "documentation": "https://github.com/yourfork/ha-realtime-assist",
+  "version": "0.1.1",
+  "documentation": "https://github.com/escadesign/ha-gpt-realtime-integration",
+  "issue_tracker": "https://github.com/escadesign/ha-gpt-realtime-integration/issues",
   "iot_class": "local_push",
-  "codeowners": ["@yourhandle"],
+  "codeowners": ["@escadesign"],
   "requirements": [],
   "config_flow": true
 }
