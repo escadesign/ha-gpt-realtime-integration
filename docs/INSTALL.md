@@ -9,7 +9,7 @@
 2. Add-on "Realtime Assist (OpenAI gpt-realtime)" auswählen und installieren.
 3. Optionen setzen:
    - `openai_api_key` (Pflicht)
-   - `input_device`/`output_device`: `auto` oder `plughw:UR22,0`
+   - `input_device`/`output_device`: `auto` oder `plughw:CARD=UR22mkII,DEV=0`
    - `language`: `de`, `voice`: `alloy`, `sample_rate`: `24000`
    - Basic-Auth / HA-URL nach Bedarf anpassen.
 4. Add-on starten und `https://<HA-IP>:8443/api/health` prüfen.
